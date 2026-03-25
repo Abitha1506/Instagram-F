@@ -9,7 +9,7 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("http://localhost:5000/api/user/login", {
+    const res = await fetch("https://instagram-b.onrender.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

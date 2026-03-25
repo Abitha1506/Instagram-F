@@ -4,7 +4,7 @@ function Profile() {
   const [profile, setProfile] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/profile")
+    fetch("https://instagram-b.onrender.com")
       .then(res => res.json())
       .then(data => setProfile(data[0]))
       .catch(err => console.log(err));

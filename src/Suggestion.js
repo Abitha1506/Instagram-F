@@ -6,12 +6,12 @@ function Suggestions() {
   const [suggestions, setSuggestions] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/profile')
+    fetch('https://instagram-b.onrender.com')
       .then(res => res.json())
       .then(data => setProfile(data[0]))
       .catch(err => console.log(err));
 
-    fetch('http://localhost:5000/api/suggestion')
+    fetch('https://instagram-b.onrender.com')
       .then(res => res.json())
       .then(data => setSuggestions(data))
       .catch(err => console.log(err));

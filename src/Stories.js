@@ -6,7 +6,7 @@ function Stories() {
   const [activeStory, setActiveStory] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/story')
+    fetch('https://instagram-b.onrender.com')
       .then(data => data.json())  
       .then(data => setStories(data))
       .catch(err => console.log(err));
