@@ -1,70 +1,174 @@
-# Getting Started with Create React App
+# 📸 Instagram Clone – MERN Stack Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack Instagram-style social media web application built using the **MERN stack (MongoDB, Express.js, React.js, Node.js)**.
+This project includes user authentication, posts feed, stories UI, suggestions panel, and profile navigation similar to Instagram.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+* User Registration & Login (JWT Authentication)
+* Secure Password Hashing using bcrypt
+* Protected Routes
+* Home Feed with Posts
+* Stories Section UI
+* Suggestions Panel
+* Sidebar Navigation
+* Profile Page Routing
+* MongoDB Atlas Database Integration
+* REST API Backend (Express.js)
+* Responsive Layout
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tech Stack
 
-### `npm test`
+### Frontend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* React.js
+* React Router DOM
+* Bootstrap
+* CSS
 
-### `npm run build`
+### Backend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Node.js
+* Express.js
+* MongoDB Atlas
+* Mongoose
+* JWT Authentication
+* bcrypt.js
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📂 Folder Structure
 
-### `npm run eject`
+```
+instagram-clone
+│
+├── backend
+│   ├── Model
+│   ├── controllers
+│   ├── routes
+│   ├── server.js
+│   └── .env
+│
+├── frontend
+│   ├── src
+│   ├── components
+│   └── App.js
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## ⚙️ Installation & Setup
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 1️⃣ Clone the repository
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+git clone https://github.com/your-username/instagram-clone.git
+```
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 2️⃣ Backend Setup
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+cd backend
+npm install
+```
 
-### Code Splitting
+Create `.env` file inside backend folder:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+MONGO_URL=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+```
 
-### Analyzing the Bundle Size
+Start backend server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+npm start
+```
 
-### Making a Progressive Web App
+Server runs on:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+http://localhost:5000
+```
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 3️⃣ Frontend Setup
 
-### Deployment
+```
+cd frontend
+npm install
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+App runs on:
 
-### `npm run build` fails to minify
+```
+http://localhost:3000
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 🔐 Authentication Flow
+
+* User registers using email & password
+* Password stored securely using bcrypt hashing
+* JWT token generated after login
+* Token stored in localStorage
+* Protected routes accessible only after login
+
+---
+
+## 📡 API Endpoints
+
+### User Routes
+
+```
+POST /api/user/register
+POST /api/user/login
+```
+
+### Post Routes
+
+```
+GET /api/post
+POST /api/post
+```
+
+### Profile Routes
+
+```
+GET /api/profile
+```
+
+### Suggestions Routes
+
+```
+GET /api/suggestion
+```
+
+### Story Routes
+
+```
+GET /api/story
+```
+
+## 🌐 Deployment
+
+Frontend → Vercel
+Backend → Render
+Database → MongoDB Atlas
+
+---
+
+## 👩‍💻 Author
+
+**Abi**
+
+MERN Stack Developer
